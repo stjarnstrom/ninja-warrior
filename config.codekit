@@ -826,6 +826,17 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/screenshot-plugin_sitch.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 151420,
+		"inputAbbreviatedPath": "\/screenshot-plugin_sitch.png",
+		"outputAbbreviatedPath": "\/screenshot-plugin_sitch.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/screenshot.png": {
 		"fileType": 32768,
 		"ignore": 0,
