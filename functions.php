@@ -154,7 +154,14 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+
+
 /**
  * custom Visual Composer blocks.
  */
 require get_template_directory() . '/inc/custom-visual-composer-blocks.php';
+
+/**
+ * add theme settings
+ */
+require get_template_directory() . '/inc/theme-settings.php';
