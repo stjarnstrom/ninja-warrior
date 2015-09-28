@@ -85,7 +85,7 @@
 		},
 	"\/component-scroll\/scroll.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/component-scroll\/scroll.js",
 		"outputAbbreviatedPath": "\/component-scroll\/min\/scroll-min.js",
