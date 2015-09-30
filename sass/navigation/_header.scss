@@ -1,0 +1,86 @@
+/* Original Header */
+
+#header {
+    height: 60px;
+    z-index: 1000;
+    position: relative;
+    background: transparent;
+}
+#header .site-branding {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    text-indent: -99999px;
+    text-align: center;
+}
+#header .site-branding a {
+    display: block;
+    background: url(images/96_sprite.png) no-repeat;
+    background-position: -22px -129px; // white
+    width: 52px;
+    height: 30px;
+}
+#header .main-navigation li a {
+    display: block;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+#header .main-navigation li:hover a {
+    color: #a4a5a6;
+    opacity: .4;
+}
+#header .main-navigation li.current-menu-item a,
+#header .main-navigation li.current-page-item a {
+    color: #a4a5a6;
+    opacity: .8;
+}
+
+.inverted-header #header .site-branding a {
+    background-position: -22px -225px; // black
+}
+.inverted-header #header .main-navigation li a {
+    color: #323436;
+}
+.inverted-header #header .main-navigation li.current-menu-item a,
+.inverted-header #header .main-navigation li.current-page-item a {
+
+    color: #777879;
+}
+@media screen and (min-width: 1025px) {
+    #header .site-branding {
+        left: 40px;
+        top: 24px;
+        margin-left: 0;
+        z-index: 2;
+    }
+}
+@media screen and (min-width: 1025px) {
+    #header .main-navigation ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+    }
+}
+@media screen and (min-width: 1025px) {
+    #header {
+        height: 80px;
+    }
+}
+@media screen and (max-width: 1025px) and (min-width: 641px) {
+    #header {
+        height: 60px;
+    }
+}
+//@media screen and (min-width: 1025px) {
+//    #header .header__nav {
+//        margin: 0;
+//        padding: 0;
+//        list-style: none;
+//        text-align: center;
+//        position: relative;
+//        display: inline-block;
+//    }
+//}

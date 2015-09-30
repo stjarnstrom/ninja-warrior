@@ -62,22 +62,24 @@
 
 /* background parallax */
 
-var updatePosition = function( bimg ) {
-    bimg.each( function( ) {
-        var a = .1;
-        var b = $( this );
-        var offset
-            = parseFloat( b.offset().top, 10 );
+(function($) {
+    var updatePosition = function( bimg ) {
+        bimg.each( function( ) {
+            var a = .1;
+            var b = $( this );
+            var offset
+                = parseFloat( b.offset().top, 10 );
 
-        $( this ).css( "background-position", "center " + ($( window ).scrollTop() - offset ) * a + "px" );
+            $( this ).css( "background-position", "center " + ($( window ).scrollTop() - offset ) * a + "px" );
+        });
+    };
+
+
+
+    $(function() {
+        var bimg = $( ".parallax-background" );
+        $( window ).on( "load scroll", function( ) {
+            updatePosition( bimg );
+        });
     });
-};
-
-
-
-$(function() {
-    var bimg = $( ".parallax-background" );
-    $( window ).on( "load scroll", function( ) {
-        updatePosition( bimg );
-    });
-});
+})(jQuery);

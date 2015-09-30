@@ -1,14 +1,25 @@
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
+//	clear: both;
+//	display: block;
+//	float: left;
 	width: 100%;
+    
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    display: inline-block;    
 
 	ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        position: relative;
+        display: inline-block;        
+        
 		display: none;
 		list-style: none;
-		margin: 0;
-		padding-left: 0;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -49,8 +60,18 @@
 		}
 	}
 	li {
-		float: left;
-		position: relative;
+        
+        display: inline-block;
+        margin: 0 21px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 78px;
+        font-size: 13px;
+        font-weight: 600;        
+        
+        
+		//float: left;
+		//position: relative;
 
 		&:hover > a,
 		&.focus > a {
