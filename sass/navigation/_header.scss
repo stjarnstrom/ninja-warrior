@@ -20,11 +20,14 @@
     width: 52px;
     height: 30px;
 }
+#footer .footer-menu li a,
 #header .main-navigation li a {
     display: block;
     color: #ffffff;
     transition: all 0.5s;
 }
+
+#footer .footer-menu li:hover a,
 #header .main-navigation li:hover a {
     color: #a4a5a6;
     opacity: .4;

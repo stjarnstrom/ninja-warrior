@@ -1,3 +1,4 @@
+.footer-menu,
 .main-navigation {
 //	clear: both;
 //	display: block;
@@ -90,6 +91,7 @@
 
 /* Small menu. */
 .menu-toggle,
+.footer-menu.toggled ul,
 .main-navigation.toggled ul {
 	display: block;
 }
@@ -98,6 +100,7 @@
 	.menu-toggle {
 		display: none;
 	}
+    .footer-menu ul,
 	.main-navigation ul {
 		display: block;
 	}

@@ -13,9 +13,9 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="footer" class="site-footer" role="contentinfo">
         <div class="name-copyright"> 
-            SAMURAJ &copy; 2015 Samuraj Kommunikation AB 
+            SAMURAJ &copy; 2015 Samuraj
         </div>
         <div class="footer-menu">
             <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'menu_id' => 'footer-menu' ) ); ?>

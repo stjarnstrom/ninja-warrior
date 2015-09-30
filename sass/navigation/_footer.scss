@@ -1,0 +1,31 @@
+#footer {
+    height: 60px;
+    z-index: 1000;
+    position: relative;
+    background: transparent;
+
+    ul, ul li {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+#footer .name-copyright {
+    position: absolute;
+    top: 26px;
+    left: 40px;
+    text-align: center;
+}
+
+#footer .footer-menu li a {
+    display: block;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+
+#footer .footer-menu li:hover a {
+    color: #a4a5a6;
+    opacity: .4;
+}
+
+

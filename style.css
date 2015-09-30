@@ -289,7 +289,12 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit; }
 
-body {
+body,
+footer#footer {
+  background: #1c1e20;
+  /* Fallback for when there is no custom background color defined. */ }
+
+#page {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
 
@@ -400,7 +405,7 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## Header
+## Header & Footer
 --------------------------------------------------------------*/
 /* Original Header */
 #header {
@@ -423,11 +428,13 @@ textarea {
   width: 52px;
   height: 30px; }
 
+#footer .footer-menu li a,
 #header .main-navigation li a {
   display: block;
   color: #ffffff;
   transition: all 0.5s; }
 
+#footer .footer-menu li:hover a,
 #header .main-navigation li:hover a {
   color: #a4a5a6;
   opacity: .4; }
@@ -467,6 +474,30 @@ textarea {
 @media screen and (max-width: 1025px) and (min-width: 641px) {
   #header {
     height: 60px; } }
+#footer {
+  height: 60px;
+  z-index: 1000;
+  position: relative;
+  background: transparent; }
+  #footer ul, #footer ul li {
+    list-style: none;
+    padding: 0; }
+
+#footer .name-copyright {
+  position: absolute;
+  top: 26px;
+  left: 40px;
+  text-align: center; }
+
+#footer .footer-menu li a {
+  display: block;
+  color: #ffffff;
+  transition: all 0.5s; }
+
+#footer .footer-menu li:hover a {
+  color: #a4a5a6;
+  opacity: .4; }
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -484,6 +515,7 @@ a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.footer-menu,
 .main-navigation {
   width: 100%;
   margin: 0;
@@ -492,6 +524,7 @@ a {
   text-align: center;
   position: relative;
   display: inline-block; }
+  .footer-menu ul,
   .main-navigation ul {
     margin: 0;
     padding: 0;
@@ -500,6 +533,7 @@ a {
     display: inline-block;
     display: none;
     list-style: none; }
+    .footer-menu ul ul,
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
@@ -507,16 +541,23 @@ a {
       top: 1.5em;
       left: -999em;
       z-index: 99999; }
+      .footer-menu ul ul ul,
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+      .footer-menu ul ul li:hover > ul, .footer-menu ul ul li.focus > ul,
+      .main-navigation ul ul li:hover > ul,
+      .main-navigation ul ul li.focus > ul {
         left: 100%; }
+      .footer-menu ul ul a,
       .main-navigation ul ul a {
         width: 200px; }
+    .footer-menu ul li:hover > ul,
+    .footer-menu ul li.focus > ul,
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
+  .footer-menu li,
   .main-navigation li {
     display: inline-block;
     margin: 0 21px;
@@ -525,12 +566,14 @@ a {
     line-height: 78px;
     font-size: 13px;
     font-weight: 600; }
+  .footer-menu a,
   .main-navigation a {
     display: block;
     text-decoration: none; }
 
 /* Small menu. */
 .menu-toggle,
+.footer-menu.toggled ul,
 .main-navigation.toggled ul {
   display: block; }
 
@@ -538,6 +581,7 @@ a {
   .menu-toggle {
     display: none; }
 
+  .footer-menu ul,
   .main-navigation ul {
     display: block; } }
 .site-main .comment-navigation, .site-main
