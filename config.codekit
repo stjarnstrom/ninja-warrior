@@ -141,13 +141,13 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/images\/96_sprite.png": {
+	"\/images\/branding_sprite.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 19859,
-		"inputAbbreviatedPath": "\/images\/96_sprite.png",
-		"outputAbbreviatedPath": "\/images\/96_sprite.png",
+		"initialSize": 5803,
+		"inputAbbreviatedPath": "\/images\/branding_sprite.png",
+		"outputAbbreviatedPath": "\/images\/branding_sprite.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -911,6 +911,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/variables-site\/_variables-site.scss",
 		"outputAbbreviatedPath": "\/sass\/css\/_variables-site.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/sass\/visualcomposer\/_custom-blocks.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/visualcomposer\/_custom-blocks.scss",
+		"outputAbbreviatedPath": "\/sass\/css\/_custom-blocks.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

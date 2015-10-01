@@ -20,7 +20,7 @@ function page_header_shortcode( $atts ) {
 /* Let's get the URL from that image */
  $image_url = $raw_image->posts[0]->guid;
  /* This is going to be our output */
- return "<div class='b-page-header' style='background-image: url( $image_url );'>
+ return "<div class='nw-page-header' style='background-image: url( $image_url );'>
  <div class='b-page-header_inner'>
  <h2>{$a['text_heading']}</h2>
  <h3>{$a['text_sub_heading']}</h3>
@@ -38,39 +38,39 @@ function your_name_integrateWithVC() {
    vc_map( array(
       "name" => __( "Page Header", "my-text-domain" ),
       "base" => "page_header",
-      "class" => "",
+      "class" => "nw-page-header",
       "category" => __( "Epic", "my-text-domain"),
       // 'admin_enqueue_js' => array(get_template_directory_uri().'/vc_extend/bartag.js'),
       // 'admin_enqueue_css' => array(get_template_directory_uri().'/vc_extend/bartag.css'),
       "params" => array(
          array(
- 'type' => 'textfield',
- 'holder' => 'div',
- 'class' => '',
- 'heading' => __( 'Text Heading' ),
- 'param_name' => 'text_heading',
- 'value' => __( 'Default Heading Text' ),
- 'description' => __( 'Enter heading text here' )
- ),
- array(
- 'type' => 'textfield',
- 'holder' => 'div',
- 'class' => '',
- 'heading' => __( 'Sub-heading' ),
- 'param_name' => 'text_sub_heading',
- 'value' => __( 'Default sub-heading text' ),
- 'description' => __( 'Enter sub-heading text here' )
- ),
- array(
- 'type' => 'attach_image',
- 'holder' => 'div',
- 'class' => 'page-header-container',
- 'heading' => __( 'Background Image' ),
- 'param_name' => 'image_id',
- 'value' => __( 'Default' ),
- 'description' => __( 'Choose a background image' )
- )
-       )
+             'type' => 'textfield',
+             'holder' => 'div',
+             'class' => '',
+             'heading' => __( 'Text Heading' ),
+             'param_name' => 'text_heading',
+             'value' => __( 'Default Heading Text' ),
+             'description' => __( 'Enter heading text here' )
+             ),
+             array(
+             'type' => 'textfield',
+             'holder' => 'div',
+             'class' => '',
+             'heading' => __( 'Sub-heading' ),
+             'param_name' => 'text_sub_heading',
+             'value' => __( 'Default sub-heading text' ),
+             'description' => __( 'Enter sub-heading text here' )
+             ),
+             array(
+             'type' => 'attach_image',
+             'holder' => 'div',
+             'class' => 'page-header-container',
+             'heading' => __( 'Background Image' ),
+             'param_name' => 'image_id',
+             'value' => __( 'Default' ),
+             'description' => __( 'Choose a background image' )
+             )
+          )
        ) 
     );
 }

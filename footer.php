@@ -15,7 +15,7 @@
 
 	<footer id="footer" class="site-footer" role="contentinfo">
         <div class="name-copyright"> 
-            SAMURAJ &copy; 2015 Samuraj
+            SAMURAJ &copy; 2015
         </div>
         <div class="footer-menu">
             <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'menu_id' => 'footer-menu' ) ); ?>

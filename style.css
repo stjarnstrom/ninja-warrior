@@ -297,6 +297,10 @@ footer#footer {
 #page {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
+  #page .wrap {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -423,9 +427,9 @@ textarea {
 
 #header .site-branding a {
   display: block;
-  background: url(images/96_sprite.png) no-repeat;
+  background: url(images/branding_sprite.png) no-repeat;
   background-position: -22px -129px;
-  width: 52px;
+  width: 122px;
   height: 30px; }
 
 #footer .footer-menu li a,
@@ -712,7 +716,7 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 0; }
 
 .page-links {
   clear: both;
@@ -861,3 +865,17 @@ object {
   -moz-transform: translate(0, 0) !important;
   -ms-transform: translate(0, 0) !important;
   transform: translate(0, 0) !important; }
+
+/*--------------------------------------------------------------
+# Custom Visual Composer blocks
+--------------------------------------------------------------*/
+.nw-page-header {
+  background-position: center top;
+  min-height: 400px;
+  position: relative;
+  width: 100%;
+  background: #333;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 0; }
