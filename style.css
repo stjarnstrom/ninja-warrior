@@ -458,6 +458,106 @@ textarea {
 .inverted-header #header .main-navigation li.current-page-item a {
   color: #777879; }
 
+/* Mobile Header */
+#hamburger {
+  box-sizing: border-box;
+  display: block;
+  width: 70px;
+  height: 45px;
+  position: fixed;
+  top: 10px;
+  left: 0;
+  z-index: 4; }
+
+#hamburger:before,
+#hamburger:after,
+#hamburger span {
+  background: #111;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 5px;
+  position: absolute;
+  left: 20px; }
+
+#hamburger:before {
+  top: 10px; }
+
+#hamburger span {
+  top: 20px; }
+
+#hamburger:after {
+  top: 30px; }
+
+/* Hamburger animation */
+#hamburger:before,
+#hamburger:after,
+#hamburger span {
+  -webkit-transition: none 0.5s ease 0.5s;
+  transition: none 0.5s ease 0.5s;
+  -webkit-transition-property: transform, top, bottom, left, opacity;
+  transition-property: transform, top, bottom, left, opacity; }
+
+html.opening #hamburger:before,
+html.opening #hamburger:after {
+  top: 20px; }
+
+html.opening #hamburger span {
+  left: -50px;
+  opacity: 0; }
+
+html.opening #hamburger:before {
+  transform: rotate(45deg); }
+
+html.opening #hamburger:after {
+  transform: rotate(-45deg); }
+
+html.opening body {
+  overflow: hidden; }
+
+.slideout {
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  html.opening .slideout {
+    -webkit-transform: translate(80%, 0);
+    -moz-transform: translate(80%, 0);
+    -ms-transform: translate(80%, 0);
+    -o-transform: translate(80%, 0);
+    transform: translate(80%, 0); }
+
+#blocker {
+  background: rgba(40, 40, 40, 0.8);
+  opacity: 0;
+  width: 100%;
+  height: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  transition: opacity 0.4s ease 0.4s; }
+  html.blocking #blocker {
+    height: 100%; }
+  html.opening #blocker {
+    opacity: 0.3;
+    transition: opacity 0.4s ease 0.4s; }
+
+#blocker,
+#content {
+  -webkit-transition: -webkit-transform 0.3s;
+  -ms-transition: -ms-transform 0.3s;
+  transition: transform 0.3s; }
+
+@media (min-width: 550px) {
+  html.opening .slideout {
+    -webkit-transform: translate(440px, 0);
+    -moz-transform: translate(440px, 0);
+    -ms-transform: translate(440px, 0);
+    -o-transform: translate(440px, 0);
+    transform: translate(440px, 0); } }
+/* media queries */
 @media screen and (min-width: 1025px) {
   #header .site-branding {
     left: 40px;
@@ -716,7 +816,8 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 0; }
+  margin: 0;
+  overflow-x: hidden; }
 
 .page-links {
   clear: both;

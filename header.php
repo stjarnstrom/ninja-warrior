@@ -33,9 +33,13 @@
 		</div><!-- .site-branding -->
         
 		<nav id="aain-navigation" class="main-navigation" role="navigation">			
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ninja-warrior' ); ?></button>			
+
+            
             <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
     </header><!-- #header -->
 
+    <div id="blocker" class="slideout"></div>
+    <a id="hamburger" class="slideout" href="#menu"><span></span></a>
+    
 	<div id="content" class="site-content">
