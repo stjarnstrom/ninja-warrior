@@ -13,16 +13,6 @@ footer#footer {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 
-#page {
-	background: $color__background-page; /* Fallback for when there is no custom background color defined. */
-
-    .wrap {
-        max-width: 1140px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 blockquote, q {
 	quotes: "" "";
 

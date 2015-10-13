@@ -126,6 +126,7 @@ function ninja_warrior_scripts() {
 	}
     
 	wp_enqueue_script( 'ninja-warrior-components', get_template_directory_uri() . '/js/components.js', array(), '20150917', true );    
+	wp_enqueue_script( 'ninja-warrior-modernizr', get_template_directory_uri() . '/modernizr-custom.min.js', array(), '20151012', true );    
 }
 add_action( 'wp_enqueue_scripts', 'ninja_warrior_scripts' );
 

@@ -277,6 +277,15 @@ mark, ins {
 big {
   font-size: 125%; }
 
+#page {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */ }
+  #page .wrap {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -293,14 +302,6 @@ body,
 footer#footer {
   background: #1c1e20;
   /* Fallback for when there is no custom background color defined. */ }
-
-#page {
-  background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
-  #page .wrap {
-    max-width: 1140px;
-    margin-left: auto;
-    margin-right: auto; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -436,10 +437,14 @@ textarea {
 #header .main-navigation li a {
   display: block;
   color: #ffffff;
-  transition: all 0.5s; }
+  transition: all 0.2s; }
+
+#header .main-navigation li:hover a {
+  color: #fff;
+  opacity: .4; }
 
 #footer .footer-menu li:hover a,
-#header .main-navigation li:hover a {
+.inverted-header #header .main-navigation li:hover a {
   color: #a4a5a6;
   opacity: .4; }
 
@@ -457,6 +462,11 @@ textarea {
 .inverted-header #header .main-navigation li.current-menu-item a,
 .inverted-header #header .main-navigation li.current-page-item a {
   color: #777879; }
+
+.transparent-header #header {
+  background: none;
+  position: absolute;
+  width: 100%; }
 
 /* Mobile Header */
 #hamburger {
@@ -575,10 +585,14 @@ html.opening body {
     display: inline-block; } }
 @media screen and (min-width: 1025px) {
   #header {
-    height: 80px; } }
-@media screen and (max-width: 1025px) and (min-width: 641px) {
+    height: 80px;
+    display: block; }
+
+  #hamburger {
+    display: none; } }
+@media screen and (max-width: 1024px) {
   #header {
-    height: 60px; } }
+    display: none; } }
 #footer {
   height: 60px;
   z-index: 1000;
@@ -629,6 +643,10 @@ a {
   text-align: center;
   position: relative;
   display: inline-block; }
+  .footer-menu.align-right,
+  .main-navigation.align-right {
+    text-align: right;
+    padding-right: 24px; }
   .footer-menu ul,
   .main-navigation ul {
     margin: 0;
@@ -971,13 +989,18 @@ object {
 /*--------------------------------------------------------------
 # Custom Visual Composer blocks
 --------------------------------------------------------------*/
+.nw-image-background,
 .nw-page-header {
-  background-position: center top;
-  min-height: 400px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background: #333;
+  color: #fff;
+  overflow: hidden;
   position: relative;
   width: 100%;
-  background: #333;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center center;
-  z-index: 0; }
+  z-index: 0;
+  text-align: center; }
+
+.nw-page-header {
+  min-height: 400px; }

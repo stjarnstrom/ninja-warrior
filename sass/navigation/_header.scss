@@ -24,11 +24,16 @@
 #header .main-navigation li a {
     display: block;
     color: #ffffff;
-    transition: all 0.5s;
+    transition: all 0.2s;
+}
+
+#header .main-navigation li:hover a {
+    color: #fff;
+    opacity: .4;
 }
 
 #footer .footer-menu li:hover a,
-#header .main-navigation li:hover a {
+.inverted-header #header .main-navigation li:hover a {
     color: #a4a5a6;
     opacity: .4;
 }
@@ -46,9 +51,15 @@
 }
 .inverted-header #header .main-navigation li.current-menu-item a,
 .inverted-header #header .main-navigation li.current-page-item a {
-
     color: #777879;
 }
+
+.transparent-header #header {
+    background: none;
+    position: absolute;
+    width: 100%;
+}
+
 
 /* Mobile Header */
 
@@ -214,11 +225,23 @@ html.opening body {
 @media screen and (min-width: 1025px) {
     #header {
         height: 80px;
+        display: block;
+    }
+    
+    #hamburger { 
+        display: none; 
     }
 }
-@media screen and (max-width: 1025px) and (min-width: 641px) {
+
+@media screen and (max-width: 1024px) and (min-width: 641px) {
     #header {
-        height: 60px;
+        //height: 60px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #header {
+        display: none;
     }
 }
 

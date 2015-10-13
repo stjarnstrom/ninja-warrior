@@ -1,13 +1,21 @@
+
+.nw-image-background,
 .nw-page-header {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background: #333;
+    color: #fff;
 
-    background-position: center top;
-    min-height: 400px;
-
+    overflow: hidden;
     position: relative;
     width: 100%;
-    background: #333;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
     z-index: 0;
+    
+    text-align: center;
 }
+
+.nw-page-header {
+    min-height: 400px;
+}
+

@@ -29,12 +29,9 @@ function page_header_shortcode( $atts ) {
 }
  
 add_shortcode( 'page_header', 'page_header_shortcode' );
-
-/* VC map */ 
-
-add_action( 'vc_before_init', 'your_name_integrateWithVC' );
+add_action( 'vc_before_init', 'page_header_integrationWithVC' );
  
-function your_name_integrateWithVC() {
+function page_header_integrationWithVC() {
    vc_map( array(
       "name" => __( "Page Header", "my-text-domain" ),
       "base" => "page_header",
@@ -74,3 +71,7 @@ function your_name_integrateWithVC() {
        ) 
     );
 }
+
+
+
+
