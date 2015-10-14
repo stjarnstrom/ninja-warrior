@@ -473,55 +473,45 @@ textarea {
   box-sizing: border-box;
   display: block;
   width: 70px;
+  width: 100%;
   height: 45px;
   position: fixed;
+  position: absolute;
   top: 10px;
   left: 0;
   z-index: 4;
-  outline: 0; }
-
-#hamburger:before,
-#hamburger:after,
-#hamburger span {
-  background: #111;
-  content: '';
-  display: block;
-  width: 30px;
-  height: 5px;
-  position: absolute;
-  left: 20px; }
-
-#hamburger:before {
-  top: 10px; }
-
-#hamburger span {
-  top: 20px; }
-
-#hamburger:after {
-  top: 30px; }
-
-/* Hamburger animation */
-#hamburger:before,
-#hamburger:after,
-#hamburger span {
-  -webkit-transition: none 0.5s ease 0.5s;
-  transition: none 0.5s ease 0.5s;
-  -webkit-transition-property: transform, top, bottom, left, opacity;
-  transition-property: transform, top, bottom, left, opacity; }
-
-html.opening #hamburger:before,
-html.opening #hamburger:after {
-  top: 20px; }
-
-html.opening #hamburger span {
-  left: -50px;
-  opacity: 0; }
-
-html.opening #hamburger:before {
-  transform: rotate(45deg); }
-
-html.opening #hamburger:after {
-  transform: rotate(-45deg); }
+  outline: 0;
+  /* animation */ }
+  #hamburger:before, #hamburger:after, #hamburger span {
+    background: #fff;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    left: 20px; }
+  .inverted-header #hamburger:before, .inverted-header #hamburger:after, .inverted-header #hamburger span {
+    color: #111; }
+  #hamburger:before {
+    top: 10px; }
+  #hamburger span {
+    top: 20px; }
+  #hamburger:after {
+    top: 30px; }
+  #hamburger:before, #hamburger:after, #hamburger span {
+    -webkit-transition: none 0.5s ease 0.5s;
+    transition: none 0.5s ease 0.5s;
+    -webkit-transition-property: transform, top, bottom, left, opacity;
+    transition-property: transform, top, bottom, left, opacity; }
+  html.opening #hamburger:before, html.opening #hamburger:after {
+    top: 20px; }
+  html.opening #hamburger span {
+    left: -50px;
+    opacity: 0; }
+  html.opening #hamburger:before {
+    transform: rotate(45deg); }
+  html.opening #hamburger:after {
+    transform: rotate(-45deg); }
 
 html.opening body {
   overflow: hidden; }

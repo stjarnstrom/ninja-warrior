@@ -74,4 +74,52 @@ function page_header_integrationWithVC() {
 
 
 
+function tab_content_shortcode( $atts ) {
+ 
+    /* These arguments are going to function like variables, allowing us to set new values in the front-end editor */
+    $a = shortcode_atts( array(
+        'tab_heading' => 'Tab Heading',
+        'content' => 'This is the default heading text',
+     ), $atts );
+ 
+    /* This is going to be our output */
+    return "<section class='nw-tab-content' data-tabheading='{$a['tab_heading']}'>
+        <h3 class='tab-heading'>{$a['tab_heading']}</h3>
+        {$a['content']}
+     </section>";
+}
 
+add_shortcode( 'nw_tab_content', 'tab_content_shortcode' );
+add_action( 'vc_before_init', 'tab_content_integrationWithVC' );
+
+function tab_content_integrationWithVC() {
+   vc_map( array(
+      "name" => __( "Tab Content", "my-text-domain" ),
+      "base" => "nw_tab_content",
+      "class" => "nw-tab-content",
+      "category" => __( "Epic", "my-text-domain"),
+      // 'admin_enqueue_js' => array(get_template_directory_uri().'/vc_extend/bartag.js'),
+      // 'admin_enqueue_css' => array(get_template_directory_uri().'/vc_extend/bartag.css'),
+      "params" => array(
+         array(
+             'type' => 'textfield',
+             'holder' => 'div',
+             'class' => '',
+             'heading' => __( 'Tab Heading' ),
+             'param_name' => 'tab_heading',
+             'value' => __( 'Tab Heading' ),
+             'description' => __( 'Enter tab heading here' )
+             ),
+             array(
+             'type' => 'textarea_html',
+             'holder' => 'div',
+             'class' => '',
+             'heading' => __( 'Tab content' ),
+             'param_name' => 'content',
+             'value' => __( 'Html content' ),
+             'description' => __( 'Html tab content goes here' )
+             )
+          )
+       ) 
+    );
+}
