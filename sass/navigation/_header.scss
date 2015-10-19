@@ -68,12 +68,13 @@
 	display: block;
 	width: 70px;
     width: 100%;
+    max-width: 60px;
 	height: 45px;
 	position: fixed;
     position: absolute;
 	top: 10px;
 	right: 0;
-	z-index: 4;
+	z-index: 1001;
     outline: 0;
 
     &:before,
@@ -141,17 +142,7 @@
     
 }
 
-// page behavior
 
-//#page {
-//    box-shadow: none;
-//    width: 100%;
-//    min-width: 320px;
-//    padding: 100px 0 160px 0;
-//    overflow: hidden;
-//    position: relative;
-//    z-index: 1;
-//}
 
 html.opening body {
     overflow: hidden;
@@ -206,6 +197,7 @@ html.opening body {
 }
 
 #blocker,
+#header,
 #footer,
 #content {
     -webkit-transition: -webkit-transform 0.3s;
@@ -218,11 +210,11 @@ html.opening body {
 /* off-canvas */
 
 #off-canvas-menu {
-    -webkit-transition: -webkit-transform 0.4s ease;
-    -moz-transition: -moz-transform 0.4s ease;
-    -ms-transition: -ms-transform 0.4s ease;
-    -o-transition: -o-transform 0.4s ease;
-    transition: transform 0.4s ease;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    -moz-transition: -moz-transform 0.3s ease;
+    -ms-transition: -ms-transform 0.3s ease;
+    -o-transition: -o-transform 0.3s ease;
+    transition: transform 0.3s ease;
 
     width: 440px;
     padding: 1em 2em;
@@ -230,15 +222,17 @@ html.opening body {
     top: 0;
     bottom: 0;
     right: 0;    
-    text-align: right;
-    
-    -webkit-transform: translate(40px, 0);
-    -moz-transform: translate(40px, 0);
-    -ms-transform: translate(40px, 0);
-    -o-transform: translate(40px, 0);
-    transform: translate(40px, 0);
+    text-align: left;
+
+    visibility: hidden;
+    -webkit-transform: translate(140px, 0);
+    -moz-transform: translate(140px, 0);
+    -ms-transform: translate(140px, 0);
+    -o-transform: translate(140px, 0);
+    transform: translate(140px, 0);
     
     html.opening & {
+        visibility: visible;
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
@@ -246,8 +240,12 @@ html.opening body {
         transform: translate(0, 0);        
     }
     
-    
+    ul, ul li {
+        list-style: none; margin: 0; padding: 0;
+        font-size: 1.3em;
+    }
 }
+
 
 
 /* media queries */
@@ -271,7 +269,7 @@ html.opening body {
     }
 }
 @media screen and (min-width: 1025px) {
-    #header {
+    #header #aain-navigation {
         height: 80px;
         display: block;
     }
@@ -282,13 +280,11 @@ html.opening body {
 }
 
 @media screen and (max-width: 1024px) and (min-width: 641px) {
-    #header {
-        //height: 60px;
-    }
+    
 }
 
 @media screen and (max-width: 1024px) {
-    #header {
+    #header #aain-navigation {
         display: none;
     }
 }

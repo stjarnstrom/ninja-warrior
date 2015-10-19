@@ -23,8 +23,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-<?php wp_nav_menu( array( 'theme_location' => 'off-canvas', 'container' => 'div', 'container_id' => 'off-canvas-menu' ) ); ?>
+<nav id="off-canvas-navigation" class="off-canvas-navigation" role="navigation">			
+    <?php wp_nav_menu( array( 'theme_location' => 'off-canvas', 'container' => 'div', 'container_id' => 'off-canvas-menu' ) ); ?>
+</nav>
 <div id="page" class="hfeed site transparent-header inverted-header">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ninja-warrior' ); ?></a>
 
