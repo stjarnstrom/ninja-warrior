@@ -5,6 +5,9 @@
  * @package Ninja Warrior
  */
 
+
+
+
 function page_header_shortcode( $atts ) {
  
 /* These arguments are going to function like variables, allowing us to set new values in the front-end editor */
@@ -30,15 +33,13 @@ function page_header_shortcode( $atts ) {
  
 add_shortcode( 'page_header', 'page_header_shortcode' );
 add_action( 'vc_before_init', 'page_header_integrationWithVC' );
- 
+
 function page_header_integrationWithVC() {
    vc_map( array(
       "name" => __( "Page Header", "my-text-domain" ),
       "base" => "page_header",
       "class" => "nw-page-header",
       "category" => __( "Epic", "my-text-domain"),
-      // 'admin_enqueue_js' => array(get_template_directory_uri().'/vc_extend/bartag.js'),
-      // 'admin_enqueue_css' => array(get_template_directory_uri().'/vc_extend/bartag.css'),
       "params" => array(
          array(
              'type' => 'textfield',
@@ -74,18 +75,17 @@ function page_header_integrationWithVC() {
 
 
 
-function tab_content_shortcode( $atts ) {
+function tab_content_shortcode( $atts, $content = null ) {
  
     /* These arguments are going to function like variables, allowing us to set new values in the front-end editor */
     $a = shortcode_atts( array(
         'tab_heading' => 'Tab Heading',
-        'content' => 'This is the default heading text',
-     ), $atts );
- 
+    ), $atts );
+
     /* This is going to be our output */
     return "<section class='nw-tab-content' data-tabheading='{$a['tab_heading']}'>
         <h3 class='tab-heading'>{$a['tab_heading']}</h3>
-        {$a['content']}
+       " . $content . "
      </section>";
 }
 
@@ -97,9 +97,10 @@ function tab_content_integrationWithVC() {
       "name" => __( "Tab Content", "my-text-domain" ),
       "base" => "nw_tab_content",
       "class" => "nw-tab-content",
+      //"icon" => get_template_directory_uri() . "/vc_extend/my_shortcode_icon.png",
       "category" => __( "Epic", "my-text-domain"),
-      // 'admin_enqueue_js' => array(get_template_directory_uri().'/vc_extend/bartag.js'),
-      // 'admin_enqueue_css' => array(get_template_directory_uri().'/vc_extend/bartag.css'),
+      //'admin_enqueue_js' => array(get_template_directory_uri().'/vc_extend/bartag.js'),
+      //'admin_enqueue_css' => array(get_template_directory_uri().'/vc_extend/bartag.css'),
       "params" => array(
          array(
              'type' => 'textfield',
@@ -110,14 +111,14 @@ function tab_content_integrationWithVC() {
              'value' => __( 'Tab Heading' ),
              'description' => __( 'Enter tab heading here' )
              ),
-             array(
+         array(
              'type' => 'textarea_html',
              'holder' => 'div',
              'class' => '',
-             'heading' => __( 'Tab content' ),
+             'heading' => __( 'Tab content', 'my-text-domain' ),
              'param_name' => 'content',
-             'value' => __( 'Html content' ),
-             'description' => __( 'Html tab content goes here' )
+             'value' => __( '<p>Html content</p>', 'my-text-domain' ),
+             'description' => __( 'Html tab content goes here', 'my-text-domain' )
              )
           )
        ) 

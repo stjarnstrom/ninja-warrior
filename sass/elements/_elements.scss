@@ -29,6 +29,10 @@ hr {
 	margin-bottom: 1.5em;
 }
 
+.nw-bg {
+    background: $color__background-body !important;
+}
+
 @import "lists";
 
 img {
@@ -37,3 +41,5 @@ img {
 }
 
 @import "tables";
+
+@import "tabs";

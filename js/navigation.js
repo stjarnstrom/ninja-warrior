@@ -26,12 +26,14 @@
                 $('html').toggleClass('opening');
                 $('html').toggleClass('blocking');
                 $('#content').toggleClass('slideout');
+                $('#footer').toggleClass('slideout');
             });
 
             $('#blocker').on('click', function() {
                 $('html').removeClass('blocking');
                 $('html').removeClass('opening');
                 $('#content').removeClass('slideout');
+                $('#footer').removeClass('slideout');
             });
 
 //            $('#nav-open-btn').on('click', function()
