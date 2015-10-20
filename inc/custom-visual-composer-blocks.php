@@ -5,9 +5,6 @@
  * @package Ninja Warrior
  */
 
-
-
-
 function page_header_shortcode( $atts ) {
  
 /* These arguments are going to function like variables, allowing us to set new values in the front-end editor */
@@ -30,7 +27,6 @@ function page_header_shortcode( $atts ) {
  </div>
  </div>";
 }
- 
 add_shortcode( 'page_header', 'page_header_shortcode' );
 add_action( 'vc_before_init', 'page_header_integrationWithVC' );
 
@@ -73,8 +69,6 @@ function page_header_integrationWithVC() {
     );
 }
 
-
-
 function tab_content_shortcode( $atts, $content = null ) {
  
     /* These arguments are going to function like variables, allowing us to set new values in the front-end editor */
@@ -88,7 +82,6 @@ function tab_content_shortcode( $atts, $content = null ) {
        " . $content . "
      </section>";
 }
-
 add_shortcode( 'nw_tab_content', 'tab_content_shortcode' );
 add_action( 'vc_before_init', 'tab_content_integrationWithVC' );
 

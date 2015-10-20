@@ -209,12 +209,12 @@ html.opening body {
 
 /* off-canvas */
 
-#off-canvas-menu {
-    -webkit-transition: -webkit-transform 0.3s ease;
-    -moz-transition: -moz-transform 0.3s ease;
-    -ms-transition: -ms-transform 0.3s ease;
-    -o-transition: -o-transform 0.3s ease;
-    transition: transform 0.3s ease;
+#off-canvas-navigation {
+    -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease 0s;
+    -moz-transition: -moz-transform 0.3s ease, opacity 0.3s ease 0s;
+    -ms-transition: -ms-transform 0.3s ease, opacity 0.3s ease 0s;
+    -o-transition: -o-transform 0.3s ease, opacity 0.3s ease 0s;
+    transition: transform 0.3s ease, opacity 0.3s ease 0s;
 
     width: 440px;
     padding: 1em 2em;
@@ -224,7 +224,8 @@ html.opening body {
     right: 0;    
     text-align: left;
 
-    visibility: hidden;
+    opacity: 0;
+    //visibility: hidden;
     -webkit-transform: translate(140px, 0);
     -moz-transform: translate(140px, 0);
     -ms-transform: translate(140px, 0);
@@ -232,7 +233,8 @@ html.opening body {
     transform: translate(140px, 0);
     
     html.opening & {
-        visibility: visible;
+        opacity: 1;
+        //visibility: visible;
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -ms-transform: translate(0, 0);

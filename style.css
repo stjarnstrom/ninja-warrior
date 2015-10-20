@@ -542,6 +542,9 @@ table {
 
   .nw-tabs-content-wrap {
     margin-top: -1px; } }
+@media screen and (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important; } }
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -760,12 +763,12 @@ html.opening body {
   transition: transform 0.3s; }
 
 /* off-canvas */
-#off-canvas-menu {
-  -webkit-transition: -webkit-transform 0.3s ease;
-  -moz-transition: -moz-transform 0.3s ease;
-  -ms-transition: -ms-transform 0.3s ease;
-  -o-transition: -o-transform 0.3s ease;
-  transition: transform 0.3s ease;
+#off-canvas-navigation {
+  -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease 0s;
+  -moz-transition: -moz-transform 0.3s ease, opacity 0.3s ease 0s;
+  -ms-transition: -ms-transform 0.3s ease, opacity 0.3s ease 0s;
+  -o-transition: -o-transform 0.3s ease, opacity 0.3s ease 0s;
+  transition: transform 0.3s ease, opacity 0.3s ease 0s;
   width: 440px;
   padding: 1em 2em;
   position: fixed;
@@ -773,20 +776,20 @@ html.opening body {
   bottom: 0;
   right: 0;
   text-align: left;
-  visibility: hidden;
+  opacity: 0;
   -webkit-transform: translate(140px, 0);
   -moz-transform: translate(140px, 0);
   -ms-transform: translate(140px, 0);
   -o-transform: translate(140px, 0);
   transform: translate(140px, 0); }
-  html.opening #off-canvas-menu {
-    visibility: visible;
+  html.opening #off-canvas-navigation {
+    opacity: 1;
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
     transform: translate(0, 0); }
-  #off-canvas-menu ul, #off-canvas-menu ul li {
+  #off-canvas-navigation ul, #off-canvas-navigation ul li {
     list-style: none;
     margin: 0;
     padding: 0;
