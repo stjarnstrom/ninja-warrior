@@ -66,15 +66,13 @@
 {
 	box-sizing: border-box;
 	display: block;
-	width: 70px;
     width: 100%;
-    max-width: 60px;
+    //max-width: 60px;
 	height: 45px;
-	position: fixed;
     position: absolute;
 	top: 10px;
 	right: 0;
-	z-index: 1001;
+	z-index: 999;
     outline: 0;
 
     &:before,
@@ -121,6 +119,7 @@
         -webkit-transition-property: transform, top, bottom, right, opacity;
         transition-property: transform, top, bottom, right, opacity;
     }
+    
     html.opening &:before,
     html.opening &:after
     {
@@ -161,16 +160,6 @@ html.opening body {
         -ms-transform: translate(-80%, 0);
         -o-transform: translate(-80%, 0);
         transform: translate(-80%, 0);
-    }
-}
-
-@media (min-width: 550px) {
-    html.opening .slideout {
-        -webkit-transform: translate(-440px, 0);
-        -moz-transform: translate(-440px, 0);
-        -ms-transform: translate(-440px, 0);
-        -o-transform: translate(-440px, 0);
-        transform: translate(-440px, 0);
     }
 }
 
@@ -216,7 +205,7 @@ html.opening body {
     -o-transition: -o-transform 0.3s ease, opacity 0.3s ease 0s;
     transition: transform 0.3s ease, opacity 0.3s ease 0s;
 
-    width: 440px;
+    width: 80%;
     padding: 1em 2em;
     position: fixed;
     top: 0;
@@ -249,8 +238,37 @@ html.opening body {
 }
 
 
+@media (min-width: 550px) {
+    html.opening .slideout {
+        -webkit-transform: translate(-440px, 0);
+        -moz-transform: translate(-440px, 0);
+        -ms-transform: translate(-440px, 0);
+        -o-transform: translate(-440px, 0);
+        transform: translate(-440px, 0);
+    }
+    
+    #off-canvas-navigation {
+        width: 440px;
+    }
+    
+    #hamburger {
+        max-width: 60px;
+    }    
+}
+
+
 
 /* media queries */
+
+@media screen and (max-width: 1024px) {
+    #header {
+        max-width: calc(100% - 80px);
+    }
+
+    #header #main-navigation {
+        display: none;
+    }
+}
 
 @media screen and (min-width: 1025px) {
     #header .site-branding {
@@ -259,8 +277,7 @@ html.opening body {
         margin-left: 0;
         z-index: 2;
     }
-}
-@media screen and (min-width: 1025px) {
+
     #header .main-navigation ul {
         margin: 0;
         padding: 0;
@@ -269,25 +286,14 @@ html.opening body {
         position: relative;
         display: inline-block;
     }
-}
-@media screen and (min-width: 1025px) {
-    #header #aain-navigation {
+    
+    #header #main-navigation {
         height: 80px;
         display: block;
     }
     
     #hamburger { 
         display: none; 
-    }
-}
-
-@media screen and (max-width: 1024px) and (min-width: 641px) {
-    
-}
-
-@media screen and (max-width: 1024px) {
-    #header #aain-navigation {
-        display: none;
     }
 }
 
